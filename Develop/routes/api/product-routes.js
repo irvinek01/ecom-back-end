@@ -107,7 +107,7 @@ router.put('/:id', (req, res) => {
         ProductTag.bulkCreate(newProductTags),
       ]);
     })
-    .then((updatedProductTags) => res.json(updatedProductTags))
+    .then((updatedProductTags) => res.json('update product with id: '+req.params.id+', success!'))
     .catch((err) => {
       // console.log(err);
       res.status(400).json(err);
@@ -118,7 +118,7 @@ router.delete('/:id', async (req, res) => {
   // delete one product by its `id` value
   try {
     const productData = await Product.destroy({ where: { id: req.params.id } });
-    res.status(200).json('deleted!');
+    res.status(200).json('product with id: '+req.params.id+', deleted!');
   } catch (err) {
     res.status(500).json(err);
   }

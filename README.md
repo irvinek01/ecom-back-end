@@ -1,5 +1,45 @@
 # 13 Object-Relational Mapping (ORM): E-Commerce Back End
 
+## Description
+Developers are often tasked with creating interfaces that make it easy for non-developers to view and interact with information stored in databases. Often these interfaces are known as **Content Management Systems**.  
+
+This command-line application allows the user to manage his/her employees by the following actions:
+ - Add departments, roles, employees
+ - View departments, roles, employees
+ - Update employee roles
+
+This application is using the following dependencies:
+ - dotenv
+ - express
+ - mysql2
+ - sequelize
+
+ ## Installation
+
+Run dependencies:
+
+```bash
+npm i
+```
+
+For creating and using the same database structure:
+
+```bash
+mysql -u root -p < db/schema.sql
+```
+
+For pre-populating the database:
+
+```bash
+npm run seed
+```
+
+For starting the server application:
+
+```bash
+npm start
+```
+
 ## Your Task
 
 Internet retail, also known as **e-commerce**, is the largest sector of the electronics industry, generating an estimated $29 trillion in 2019. E-commerce platforms like Shopify and WooCommerce provide a suite of services to businesses of all sizes. Due to their prevalence, understanding the fundamental architecture of these platforms will benefit you as a full-stack web developer.
